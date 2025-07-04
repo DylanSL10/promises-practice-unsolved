@@ -57,13 +57,7 @@ export function onReject(errObj) {
 export const handlePromise = (promise) => {
   return promise
   .then((value) => value)
-  .catch((error) => {
-    if(error && error.message) {
-      return onReject(error)
-    } else {
-      return error
-    }
-  })
+  .catch((error) => ( error?.message ? onReject(error) : error));
 };
 
 // === TEST YOURSELF ===

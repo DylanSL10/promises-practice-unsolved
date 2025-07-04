@@ -21,14 +21,13 @@ export const attachTitle = (arg) => {
  */
 
 export const getPromise = () => {
-  return new Promise((resolve)=> {
+  return new Promise((resolve) => {
     resolve('MANHATTAN')
   })
   .then(attachTitle)
-  .then((result) => {
-    console.log(result);
-  })
+  .then(console.log);
 };
+  
 
 
 

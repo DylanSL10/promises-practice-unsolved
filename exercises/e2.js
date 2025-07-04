@@ -16,8 +16,8 @@
  */
 
 export const getPromise = (boolean) => {
-  return new Promise((resolve,reject) =>{
-    if(boolean){
+  return new Promise((resolve,reject) => {
+    if (boolean) {
       resolve('The PROMISE was RESOLVED')
     } else {
       reject('The PROMISE was REJECTED')
@@ -37,7 +37,7 @@ export const getPromise = (boolean) => {
 export const handlePromise = (promise) => {
   return promise.then(
     (value) => value,
-    (err) => "Uh Oh"
+    () => "Uh Oh"
 )};
 
 // === TEST YOURSELF ===

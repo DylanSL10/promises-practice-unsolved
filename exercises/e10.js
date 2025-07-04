@@ -54,5 +54,6 @@ export const fetchCharacterById = (id) => {
 export const fetchAllCharactersByIds = async (ids) => {
    const characterPromises = ids.map(id => fetchCharacterById(id));
   return Promise.all(characterPromises)
+    .then((data) => data)
     .catch(() => []);
 };
